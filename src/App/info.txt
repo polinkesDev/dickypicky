@@ -1,0 +1,7 @@
+Code in App dir is specific for a project.
+
+The word "bootstrap" is a term to describe a piece of code responsible for
+    1. loading other files,
+    2. configuring the project.
+
+The start of the application should be in a public folder files (index).
