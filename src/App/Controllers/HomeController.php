@@ -18,8 +18,8 @@ class HomeController
 
     public function home() // or 'index' or 'root'
     {
-        $this->view->render("/index.php", [
-            'title' => 'Home Page 10'
+        echo $this->view->render("/index.php", [
+            'title' => 'Home Page 13'
         ]);
     }
 }
