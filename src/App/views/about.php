@@ -10,7 +10,7 @@
 		<hr />
 
 		<!-- Escaping Data -->
-		<p>Escaping Data: </p>
+		<p>Escaping Data: <?php echo esc($title); ?></p>
 	</section>
 	<!-- End Main Content Area -->
 
