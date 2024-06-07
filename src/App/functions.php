@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 function dd(mixed $value) { // "dump-and-die" function
     echo "<pre>";
-        var_dump($value);
+        print_r($value);
     echo "</pre>";
     die(); // stop load the page
 }
