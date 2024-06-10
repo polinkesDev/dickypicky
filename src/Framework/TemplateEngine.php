@@ -8,6 +8,7 @@ class TemplateEngine
 {
     public function __construct(private string $basePath)
     {
+        echo 'TemplateEngine __construct:' . '<br>';
     }
     
     public function render(string $template, array $data = [])
