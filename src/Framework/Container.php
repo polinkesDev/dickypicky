@@ -23,6 +23,12 @@ class Container
             throw new ContainerException("Class {$className} is not instantiable");
         }
 
-        dd($reflectionClass);
+        $constructor = $reflectionClass->getConstructor();
+
+        if (!$constructor) { // polinkesDev: how is it possible? NON-object?
+            return new $className;
+        }
+
+        dd($constructor);
     }
 }
