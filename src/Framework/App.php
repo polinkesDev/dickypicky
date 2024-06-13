@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+// Developers don't have access to the Router via the App class
+
 namespace Framework;
 
 class App
@@ -31,5 +33,9 @@ class App
     public function get(string $path, array $controller, )
     {
         $this->router->add('GET', $path, $controller);
+    }
+    public function addMiddleware(string $middleware)
+    {
+        $this->router->addMiddleware($middleware);
     }
 }

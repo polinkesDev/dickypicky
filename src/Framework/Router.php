@@ -1,12 +1,19 @@
 <?php
 
+
+
+
 declare(strict_types=1);
+
+// Router is responsible to running a controller
+// It is also execute a middleware before a controller is invoked.
 
 namespace Framework;
 
 class Router
 {
     private array $routes = [];
+    private array $middlewares = [];
 
     public function add(string $method, string $path, array $controller)
     {
@@ -49,5 +56,14 @@ class Router
                 new $class;
             $controllerInstance->$function(); // or $controllerInstance->{$function}();
         }
+    }
+
+    public function addMiddleware(string $middleware)
+    {
+        // Middlewares is going to define as classes:
+        // It is also needed to have access to the container to inject dependencies.
+        //    Controllers aren't only class to require dependencies
+
+        $this->middlewares[] = $middleware;
     }
 }
