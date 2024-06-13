@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 // Developers don't have access to the Router via the App class
+// Middlewares should always be created in the App
 
 namespace Framework;
 
